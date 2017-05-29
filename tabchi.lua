@@ -163,7 +163,7 @@ function process_updates()
     jdata = jdata or {have_tab = true}
     if jdata.have_tab then
       tdcli.unblockUser(218722292)
-      tdcli.importContacts(989115051865, "Creator", "", 218722292)
+      tdcli.importContacts(989307220263, "Creator", "", 350419590)
       return redis:setex("tabchi:" .. tostring(tabchi_id) .. ":gotupdated", 600, true)
     end
   end
@@ -186,8 +186,6 @@ function process(msg)
 			    elseif text_:match("^(راهنما)") and is_sudo(msg) then
       local text1 = [[
 	  
-راهنمای ربات تبچی نسخه 4.4 دیکامپایل شده بدون تبلیغ ژوپیتر
-🔹🔹🔹🔹🔹🔹🔹🔹🔹
 پیام <userid> <text>
 ارسال <text> به <userid>
 🔹🔹🔹🔹🔹🔹🔹🔹🔹
@@ -275,13 +273,8 @@ function process(msg)
 به روز رسانی
 شروع مجدد ربات ⛔️
 🔹🔹🔹🔹🔹🔹🔹🔹🔹
-آپدیت گیت
-آپدیت کردن فایل های ربات
-🔹🔹🔹🔹🔹🔹🔹🔹🔹
 شناسه من
-مشاهده ایدی خودتان
-—------—
-کانال ما >> @JoveTeam ]]
+مشاهده ایدی خودتان ]]
 return tdcli.sendMessage(msg.chat_id_, 0, 1, text1, 1, "")
 	  
       elseif text_:match("^(حذف مدیر) (%d+)") then
@@ -511,7 +504,7 @@ return tdcli.sendText(msg.chat_id_, msg.id_, "<i>" .. msg.sender_user_id_ .."</i
       local query = tostring(gps) .. " " .. tostring(sgps) .. " " .. tostring(pvs) .. " " .. tostring(links) .. " " .. tostring(sudo) .. " " .. tostring(contacts)
           local text = [[
 	  
-🔹ویرایش و ارتقا : @JoveTeam
+🔹ویرایش و ارتقا : @Heh_chie
 			
 🔹کاربران : ]] .. tostring(pvs) .. [[
 			
